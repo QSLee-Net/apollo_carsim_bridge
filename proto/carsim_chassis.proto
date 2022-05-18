@@ -1,0 +1,33 @@
+syntax = "proto2";
+
+import "header.proto";
+
+package apollo.bridge;
+
+message Carsim {
+    enum GearPosition {
+      GEAR_NEUTRAL = 0;
+      GEAR_DRIVE = 1;
+      GEAR_REVERSE = 2;
+      GEAR_PARKING = 3;
+      GEAR_LOW = 4;
+      GEAR_INVALID = 5;
+      GEAR_NONE = 6;
+    }
+    // carsim output signals
+    optional float speed_mps_vx = 1;
+    optional float speed_mps_vy = 2;
+    optional float yaw_rate = 3;
+    optional float angle_steering = 4;
+    optional float angle_rate_steering = 5;
+    optional float pos_x_egovehicle = 6;
+    optional float pos_y_egovehicle = 7;
+    optional float pos_z_egovehicle = 8;
+    optional float angle_roll_egovehicle = 9;
+    optional float angle_pitch_egovehicle = 10;
+    optional float angle_yaw_egovehicle = 11;
+    optional GearPosition gear_localtion = 12;
+    optional float acc_x_egovehicle = 13;
+    optional float acc_y_egovehicle = 14;
+    optional apollo.common.Header header = 15;
+  }

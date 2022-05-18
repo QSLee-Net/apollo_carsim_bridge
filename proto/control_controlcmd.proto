@@ -1,0 +1,26 @@
+syntax = "proto2";
+
+package apollo.bridge;
+
+import "header.proto";
+import "carsim_chassis.proto";
+
+message ControlCmd {
+    optional apollo.common.Header header = 1;
+    // target throttle in percentage [0,100]
+    optional double throttle = 2;
+    // target brake in percentage [0,100]
+    optional double brake = 3;
+    // target non-directional steering rate, in percentage of full scale per second [0,100]
+    optional double steering_rate = 4;
+    // target steering angle, in percentage of full scale [-100,100]
+    optional double steering_target = 5;
+    // parking brake engage. true: engaged
+    optional bool parking_brake = 6;
+    // target speed, in m/s
+    optional double target_speed = 7;
+    // target acceleration in m/s^2
+    optional double target_acc = 8;
+    // gear position
+    optional apollo.bridge.Carsim.GearPosition gear_position = 9;
+  }

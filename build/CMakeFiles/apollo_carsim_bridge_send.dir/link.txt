@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/apollo_carsim_bridge_send.dir/src/udp_bridge_sender_carsim.cc.o  -o apollo_carsim_bridge_send -Wl,-rpath,/home/xucong/Platform/apollo_carsim_bridge/build:/usr/local/lib libapollo_carsim_bridge.so /usr/local/lib/libprotobuf.so -lpthread 

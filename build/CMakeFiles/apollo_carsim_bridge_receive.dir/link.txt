@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/apollo_carsim_bridge_receive.dir/src/udp_bridge_receiver_carsim.cc.o  -o apollo_carsim_bridge_receive -Wl,-rpath,/home/xucong/Platform/apollo_carsim_bridge/build:/usr/local/lib libapollo_carsim_bridge.so /usr/local/lib/libprotobuf.so -lpthread 
